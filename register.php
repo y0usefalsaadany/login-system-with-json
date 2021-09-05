@@ -1,5 +1,4 @@
 <?php
-require "validate.php";
 $send = $_POST['send'];
 if (isset($send)){
 	$name            = trim(filter_var($_POST['name'],FILTER_SANITIZE_STRING));

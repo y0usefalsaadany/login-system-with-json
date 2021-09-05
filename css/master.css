@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    outline: none;
+}
+
+section {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    background: #010609;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: .5s;
+}
+
+section.active {
+    background: #c64096bf;
+}
+
+section .container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+section .container .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .container .user img {
+    width: 40%;
+    height: 100%;
+}
+
+section .container .user .img-bx {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: .5s;
+}
+
+section .container .user .img-bx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .container .user .form-bx {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: .5s;
+}
+
+section .container .user .form-bx h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+section .container .user .form-bx input {
+    width: 100%;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 8px 0;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    background: #f5f5f5;
+    color: #333;
+}
+
+section .container .user .form-bx input[type="submit"] {
+    max-width: 100px;
+    color: #fff;
+    cursor: pointer;
+    background: #677eff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+section .container .user.singup-bx .form-bx input[type="submit"] {
+    background: #e73e49;
+}
+
+section .container .user .form-bx input[type="submit"]:hover {
+    border-radius: 2px;
+    background: #555;
+}
+
+section .container .user .form-bx .singup {
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    font-weight: 500;
+}
+
+section .container .user .form-bx .singup a {
+    font-weight: 600;
+    color: #677eff;
+}
+
+section .container .singup-bx {
+    pointer-events: none;
+}
+
+section .container.active .singup-bx {
+    pointer-events: initial;
+}
+
+section .container .singup-bx .form-bx {
+    top: 100%;
+}
+
+section .container.active .singup-bx .form-bx {
+    top: 0;
+}
+
+section .container .singup-bx .img-bx {
+    top: -100%;
+    transition: .5s;
+}
+
+section .container.active .singup-bx .img-bx {
+    top: 0;
+}
+
+section .container .singin-bx .form-bx {
+    top: 0;
+}
+
+section .container.active .singin-bx .form-bx {
+    top: 100%;
+}
+
+section .container .singin-bx .img-bx {
+    top: 0;
+    transition: .5s;
+}
+
+section .container.active .singin-bx .img-bx {
+    top: -100%;
+}
+
+@media (max-width: 991px) {
+    section .container {
+        max-width: 400px;
+    }
+
+    section .container .img-bx {
+        display: none;
+    }
+
+    section .container .user .form-bx {
+        width: 100%;
+    }
+
+    section .container.active .singin-bx .form-bx {
+        top: -100%;
+    }
+}

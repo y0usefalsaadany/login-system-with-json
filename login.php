@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 session_start();
 $email = trim(filter_var($_POST['mail'],FILTER_SANITIZE_EMAIL));
 $password = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
